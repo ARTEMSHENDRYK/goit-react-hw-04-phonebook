@@ -1,0 +1,27 @@
+.name {
+  margin-bottom: 8px;
+  width: 150px;
+  font-size: 18px;
+}
+
+.number {
+  width: 130px;
+  font-size: 18px;
+}
+
+.button {
+  height: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: teal;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: burlywood;
+}
+
+.button:active {
+  background-color: blue;
+}
