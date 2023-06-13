@@ -29,7 +29,7 @@ function App() {
   }
 
   function handleFilter(evt) {
-    setFilter({ filter: evt.target.value });
+    setFilter(evt.target.value);
   }
 
   function filterContacts() {
@@ -37,7 +37,7 @@ function App() {
   }
 
   function handleDelete(id) {
-    this.setContacts({ contacts: contacts.filter(contact => contact.id !== id) });
+    setContacts(contacts.filter(contact => contact.id !== id));
   }
 
   return (

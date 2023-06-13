@@ -3,28 +3,25 @@ import PropTypes from "prop-types";
 import ContactElement from "components/ContactElement/ContactElement";
 import css from "./ContactList.module.css";
 
-class ContactList extends React.Component {
-  render() {
-    const { contacts, onDelete } = this.props;
-    return (
-      <div className={css.container}>
-        <ul>
-          {contacts.map(({ id, name, number }) => {
-            return (
-              <li className={css.list} key={id}>
-                <ContactElement
-                  id={id}
-                  name={name}
-                  number={number}
-                  onDelete={onDelete}
-                />
-              </li>
-            );  
-          })}
-        </ul>
-      </div>
-    )
-  }
+function ContactList({ contacts, onDelete }) {
+  return (
+    <div className={css.container}>
+      <ul>
+        {contacts.map(({ id, name, number }) => {
+          return (
+            <li className={css.list} key={id}>
+              <ContactElement
+                id={id}
+                name={name}
+                number={number}
+                onDelete={onDelete}
+              />
+            </li>
+          );  
+        })}
+      </ul>
+    </div>
+  )
 }
 
 ContactList.propTypes = {
