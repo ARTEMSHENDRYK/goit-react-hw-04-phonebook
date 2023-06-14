@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const parsedContacts = JSON.parse(localStorage.getItem("Contacts"));
     parsedContacts ? setContacts(parsedContacts) : setContacts([]);
-  }, []);
+  }, [])
 
   useEffect(() => {
     localStorage.setItem("Contacts", JSON.stringify(contacts));
